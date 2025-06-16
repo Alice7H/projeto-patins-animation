@@ -1,7 +1,6 @@
 section.gallery {
   width: 100%;
-  max-width: 80rem;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem;
   margin-inline: auto;
 
   & header {
@@ -18,12 +17,11 @@ section.gallery {
   }
 
   & .content {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     display: grid;
     grid-template-areas:
-      "A B B"
-      "C C D";
-    gap: 2.5rem;
+      "A" "B" "C" "D";
+    gap: 1.5rem;
   }
 
   & figure {
@@ -132,5 +130,28 @@ section.gallery {
     -moz-transform: translateY(100%);
     -ms-transform: translateY(100%);
     -o-transform: translateY(100%);
+  }
+}
+
+@media (width >= 40em) {
+  section.gallery .content {
+    grid-template-areas:
+      "A B"
+      "C D";
+  }
+}
+
+@media (width >= 80em) {
+  section.gallery {
+    max-width: 80rem;
+    padding: 2.5rem 2rem;
+
+    & .content {
+      margin-top: 2rem;
+      grid-template-areas:
+        "A B B"
+        "C C D";
+      gap: 2.5rem;
+    }
   }
 }

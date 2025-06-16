@@ -17,10 +17,10 @@
   --background: #FAFAFA;
 
   --ff-base: "Montserrat", sans-serif;
-  --text-sm: .875rem;
+  --text-sm: .75rem;
   --text-base: 1rem;
-  --text-lg: 2.5rem;
-  --text-xl: 4rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
  }
 
  html, button {
@@ -44,4 +44,13 @@
  a {
    color: inherit;
    text-decoration: none;
+ }
+
+ @media (width >= 80em) {
+   :root {
+      --text-sm: .875rem;
+      --text-base: 1rem;
+      --text-lg: 2.5rem;
+      --text-xl: 4rem;
+   }
  }
